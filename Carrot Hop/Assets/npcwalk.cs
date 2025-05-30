@@ -19,9 +19,9 @@ public class npcwalk : MonoBehaviour {
     private void FixedUpdate() {
         if (hit.collider != false) {
             if (isFacingLeft) {
-              rb.velocity = new Vector2(speed,rb.velocity.y); 
+              rb.linearVelocity = new Vector2(speed,rb.linearVelocity.y); 
             } else {
-              rb.velocity = new Vector2(-speed,rb.velocity.y);   
+              rb.linearVelocity = new Vector2(-speed,rb.linearVelocity.y);   
             }
         } else {
             isFacingLeft = !isFacingLeft;
